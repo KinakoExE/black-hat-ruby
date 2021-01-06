@@ -14,14 +14,11 @@ subcommands = {
   end
 }
 
-
 subcmdtext = <<HELP
 case Available commands:
   creds  :\t set user credentials
 See '#{__FILE__}' COMMAND --help' for more information on a specific command.
 HELP
-
-
 
 opts = OptionParser.new do |opts|
   opts.banner = "Usage: #{__FILE__} [option] [subcommand [options]]"
