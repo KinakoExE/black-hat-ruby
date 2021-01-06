@@ -2,25 +2,15 @@ AllCops:
   Exclude:
     - "memo/*"
   DisplayCopNames: true
-
-
-Style/AndOr:
-  EnforcedStyle: conditionals
-
-Style/AsciiComments:
-  Enabled: false
-
-Style/Documentation:
-  Enabled: false
-
-Style/NumericLiterals:
-  Enabled: false
-
-Style/ClassAndModuleChildren:
-  Enabled: false
+  DisabledByDefault: true
 
 Bundler/OrderedGems:
-  Enabled: false
-
-Lint/ShadowedException:
-  Enabled: false
+  Enabled: true
+Style/HashSyntax:
+  Enable: true
+Layout/EmptyLines:
+  Enabled: true
+Layout/TrailingEmptyLines:
+  Enabled: true
+Layout/TrailingWhitespace:
+  Enabled: true
