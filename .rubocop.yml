@@ -1,0 +1,16 @@
+AllCops:
+  Exclude:
+    - "memo/*"
+  DisplayCopNames: true
+  DisabledByDefault: true
+
+Bundler/OrderedGems:
+  Enabled: true
+Style/HashSyntax:
+  Enabled: true
+Layout/EmptyLines:
+  Enabled: true
+Layout/TrailingEmptyLines:
+  Enabled: true
+Layout/TrailingWhitespace:
+  Enabled: true

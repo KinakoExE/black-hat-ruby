@@ -12,4 +12,3 @@ mac = """
 
 mac_regex = /(?:[0-9A-F][0-9A-F][:\-]){5}[0-9A-F][0-9A-F]/i
 pp mac.scan(mac_regex)
-
