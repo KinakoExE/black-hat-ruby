@@ -3,6 +3,7 @@ AllCops:
     - "memo/*"
   DisplayCopNames: true
   DisabledByDefault: true
+  TargetRubyVersion: '2.6.6'
 
 Bundler/OrderedGems:
   Enabled: true
