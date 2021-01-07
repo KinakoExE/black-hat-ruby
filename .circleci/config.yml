@@ -2,13 +2,27 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/ruby:latest
+      - image: circleci/ruby:2.6.6
+        environment:
+          BUNDLE_PATH: vendor/bundle
+          BUNDLER_VERSION: 2.2.3
     steps:
       - checkout
-
+      - restore_cache:
+          name: restore gem cache
+          keys:
+            - v1-bundle-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: bundler install
+          command: gem install bundler -v 2.2.3
       - run:
           name: bundle
-          command: bundle install
+          command: bundle check --path vendor/bundle || bundle install
+      - save_cache:
+          name: save gem cache
+          key: v1-bundle-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
       - run:
           name: rubocop
           command: bundle exec rubocop
