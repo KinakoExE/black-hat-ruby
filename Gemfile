@@ -6,5 +6,8 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 ruby '2.6.6'
 
+gem 'nokogiri'
+gem 'pry'
+gem 'pry-byebug'
 gem 'rubocop'
 gem 'tty-screen'
